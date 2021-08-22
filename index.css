@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.container-vertical {
+  height: 100%;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  height: 8%;
+}
+
+.topbar-button {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: black;
+}
+
+.topbar-button:hover {
+  background-color: #42a5f5;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 92%;
+}
+.leftThing {
+  width: 61.8%;
+  background-color: grey;
+  padding: 15px;
+}
+
+.rightThing {
+  width: 38.2%;
+  background-color: pink;
+  padding: 15px;
+}
+
+.row {
+	display: flex;
+	
+}
+.cell{
+	height: 50px;
+	width: 50px;
+	background-color: blue;
+	border-width: 5px;
+	border-style: solid;
+}
