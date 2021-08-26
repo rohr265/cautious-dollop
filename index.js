@@ -1,18 +1,45 @@
-var counter = 0;
 var table = document.getElementById("table");
-var rows = table.children;
-function makeSomeWords()
+
+var tableArray=[];
+
+
+function makeTable(width, height)
 {
 	
-	var x = document.getElementById("wordsSpace");
-	x.innerHTML = Math.random();
-	var bluePower = 10;
-	var redPower = 20;
+	// Nested loop to create all the cells
+	for (let i=0; i<width; i++)
+	{
+		let tempCol = document.createElement("div");
+		tempCol.className = "col";
+		table.appendChild(tempCol);
+		
+		tableArray[i] = [];
+		
+		for (let j=0; j<height; j++)
+		{
+			let tempNode = document.createElement("div");
+			tempNode.className = "cell";
+			tempCol.appendChild(tempNode);
+			
+			tableArray[i][j] = tempNode;
+		}		
+		
+	}
+}
+
+makeTable(8,5);
+
+function cellExampleButton()
+{
+	let x = document.getElementById("cellX").value;
+	let y = document.getElementById("cellY").value;
 	
-	for (let j = 0; j < rows[counter].children.length; j++) {
-		rows[counter].children[j].style.backgroundColor = "red";
-	} 
+	getCell(x, y).style.backgroundColor = "red";
 	
-	counter++;
-	
+}
+
+
+function getCell(x, y)
+{
+	return tableArray[x][y];
 }
