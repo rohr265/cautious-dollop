@@ -43,7 +43,7 @@ makeTable(8,8);
 
 function cellExampleButton()
 {
-	let x = document.getElementById("cellX").value;
+	let x = document.getElementById("cellX").value; // pulls coordinates from the text boxes
 	let y = document.getElementById("cellY").value;
 	
 	convertToRed(tableArray[x][y]);
